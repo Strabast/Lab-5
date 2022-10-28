@@ -21,8 +21,8 @@ void draw() {
 }
 
 class KochFractal {
-  PVector start;       // A PVector for the start
-  PVector end;         // A PVector for the end
+  PVector start;       
+  PVector end;         
   ArrayList<KochLine> lines;   // A list to keep track of all the lines
   int count;
 
@@ -108,7 +108,6 @@ class KochLine {
     return b.copy();
   }
 
-  // This is easy, just 1/3 of the way
   PVector kochleft() {
     PVector v = PVector.sub(b, a);
     v.div(3);
@@ -116,7 +115,6 @@ class KochLine {
     return v;
   }
 
-  // More complicated, have to use a little trig to figure out where this PVector is!
   PVector kochmiddle() {
     PVector v = PVector.sub(b, a);
     v.div(3);
@@ -130,7 +128,6 @@ class KochLine {
     return p;
   }
 
-  // Easy, just 2/3 of the way
   PVector kochright() {
     PVector v = PVector.sub(a, b);
     v.div(3);
